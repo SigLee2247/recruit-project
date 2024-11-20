@@ -1,1 +1,12 @@
-spring.application.name=biz-task
+spring:
+  application:
+    name: biz-task
+  datasource:
+    url: jdbc:mariadb://${DB_URL}/penta?useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true
+    password: ${DB_PW}
+    username: ${DB_IP}
+    hikari:
+      auto-commit: false
+    jpa:
+      hibernate:
+        ddl-auto: none
